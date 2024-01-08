@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Hovedinfo from "../../utils/Virksomhedsinfo/Hovedinfo";
+import ScrollToTop from "../../utils/ScrollToTop";
 import axios from "axios";
 import { Url } from "../../utils/Url";
 import { useContext } from 'react';
@@ -188,7 +189,7 @@ function Nav() {
                     ></label>
                     <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
                     <li>
-                      <Link to="/">Hjem</Link>
+                      <Link to="/" onClick={<ScrollToTop />}>Hjem</Link>
                     </li>
                     <li>
                       <details>
@@ -210,7 +211,7 @@ function Nav() {
                       <Link to="/blog">Blog</Link>
                     </li>
                     <li>
-                      <Link to="/Kontakt">Kontakt</Link>
+                      <Link to="/Kontakt" onClick={<ScrollToTop />}>Kontakt</Link>
                     </li>
                     </ul>
                   </div>
@@ -271,7 +272,7 @@ function Nav() {
           <div className="hidden lg:flex justify-center">
                   <ul className="menu menu-horizontal">
                     <li>
-                      <Link to="/">Hjem</Link>
+                      <Link to="/" onClick={<ScrollToTop />}>Hjem</Link>
                     </li>
                     <li>
                       <details>
@@ -293,7 +294,7 @@ function Nav() {
                       <Link to="/blog">Blog</Link>
                     </li>
                     <li>
-                      <Link to="/Kontakt">Kontakt</Link>
+                      <Link to="/Kontakt" onClick={<ScrollToTop />}>Kontakt</Link>
                     </li>
                   </ul>
                 </div>
